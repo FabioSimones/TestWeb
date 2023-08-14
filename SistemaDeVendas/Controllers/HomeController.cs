@@ -17,6 +17,8 @@ namespace SistemaDeVendas.Controllers
 
         public IActionResult Privacy()
         {
+            ViewData["Message"] = "Sales Web MVC app from C# course";
+            ViewData["Aluno"] = "Fábio Simones";
             return View();
         }
 
