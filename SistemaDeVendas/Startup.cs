@@ -11,6 +11,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using SistemaDeVendas.Data;
+using SistemaDeVendas.Services;
 
 namespace SistemaDeVendas
 {
@@ -40,6 +41,7 @@ namespace SistemaDeVendas
                     options.UseMySql(Configuration.GetConnectionString("SistemaDeVendasContext"), builder =>
                         builder.MigrationsAssembly("SistemaDeVendas")));
             services.AddScoped<SeedingService>();
+            services.AddScoped<SellerService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
