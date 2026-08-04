@@ -95,8 +95,6 @@ A connection string do banco de dados MySQL fica em `SistemaDeVendas/appsettings
 }
 ```
 
-> **Atenção — segurança**: o arquivo `appsettings.json` versionado neste repositório contém, no momento desta análise, uma credencial de banco em texto plano (usuário e senha reais). Recomenda-se fortemente: (1) trocar essa senha imediatamente no servidor MySQL; (2) mover a connection string para uma variável de ambiente, para o **User Secrets** do .NET, ou para um `appsettings.Local.json` ignorado pelo Git; (3) avaliar a remoção do segredo do histórico do Git. Veja [docs/SECURITY.md](docs/SECURITY.md).
-
 Não há arquivo `appsettings.Development.json` com connection string própria — o ambiente de desenvolvimento reutiliza a mesma connection string de `appsettings.json`, alterando apenas o nível de log.
 
 Os arquivos `Properties/serviceDependencies.json` e `serviceDependencies.local.json` (metadados do Visual Studio Connected Services) referenciam o tipo `mssql`/`mssql.local`, o que não corresponde ao banco real (MySQL) — aparenta ser resquício de scaffolding e pode ser ignorado.
@@ -171,7 +169,7 @@ Possíveis evoluções futuras (não implementadas):
 
 ## Autor
 
-Fábio Simões
+Fábio Simones
 
 ## Licença
 
